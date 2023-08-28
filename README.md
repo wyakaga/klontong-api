@@ -77,4 +77,10 @@ email: user@mail.com
 password: user123
 ```
 
-*take a look at the [postman collection](klontong.postman_collection.json) to run the API*
+<h2>Table Structure</h2>
+
+[click this link to view it](https://dbdiagram.io/d/64ec265702bd1c4a5e80fcb7)
+
+<h2>Postman Documentation</h2>
+
+Take a look at the [postman collection](klontong.postman_collection.json) to run the API by import it
