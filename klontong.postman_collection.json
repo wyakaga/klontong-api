@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "c20cde06-285b-4487-8938-30bff9a95d2b",
+		"name": "klontong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26776035"
+	},
+	"item": [
+		{
+			"name": "get product detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTMxMjYxNDMsImV4cCI6MTY5MzIxMjU0M30.lB1DjrGAzaPPPMhlsPJo_ijX9KGhiQ6EzyyOCSEuQFk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/39",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products?search=&groupBy=&order=&limit=12&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": ""
+						},
+						{
+							"key": "groupBy",
+							"value": "",
+							"description": "snack | beverage | spice | vegetable"
+						},
+						{
+							"key": "order",
+							"value": "",
+							"description": "cheapest | priciest"
+						},
+						{
+							"key": "limit",
+							"value": "12"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTMwNDEwMzIsImV4cCI6MTY5MzEyNzQzMn0.CosZAp1X8efY09_TLXHd8IPro5pfjYJ36MD6dW3gkI8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTMwNDEwMzIsImV4cCI6MTY5MzEyNzQzMn0.CosZAp1X8efY09_TLXHd8IPro5pfjYJ36MD6dW3gkI8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "categoryId",
+							"value": "2",
+							"description": "1 | 2 | 3 | 4",
+							"type": "default"
+						},
+						{
+							"key": "name",
+							"value": "Choco Oreo",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Refreshing drink for you hot day, energized and charge your energy",
+							"type": "default"
+						},
+						{
+							"key": "weight",
+							"value": "10",
+							"type": "default"
+						},
+						{
+							"key": "width",
+							"value": "10",
+							"type": "default"
+						},
+						{
+							"key": "length",
+							"value": "10",
+							"type": "default"
+						},
+						{
+							"key": "height",
+							"value": "10",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "10000",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "e:\\img\\img for products\\choco-oreo.webp"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@mail.com"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "suwondo@mail.com"
+						},
+						{
+							"key": "password",
+							"value": "user123"
+						},
+						{
+							"key": "role",
+							"value": "",
+							"description": "admin | customer"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
